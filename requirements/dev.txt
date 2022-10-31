@@ -1,5 +1,7 @@
 -r main.txt
 
-black
+django-debug-toolbar==3.7.0
+django-extensions==3.2.1
 ipython
+black
 flake8
