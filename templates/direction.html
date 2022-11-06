@@ -1,0 +1,51 @@
+{% load i18n %}
+<header>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item site-logo" href="{% url 'home' %}">
+        <strong>PyTravel</small>.al</small></strong>
+      </a>
+      <a
+        role="button"
+        class="navbar-burger"
+        aria-label="menu"
+        aria-expanded="false"
+        data-target="navbar-main-menu"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbar-main-menu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="{% url 'home' %}">{% translate 'Home' %}</a>
+        <a class="navbar-item" href="{% url 'about_us' %}">{% translate "About Us" %}</a>
+        <a class="navbar-item" href="{% url 'contact_us' %}">{% translate "Contact Us" %}</a>
+        <a class="navbar-item" href="{% url 'privacy_policy' %}">{% translate "Privacy Policy" %}</a>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            {% if user.is_authenticated %}
+            <a class="button is-primary" href="{% url 'profile' %}">
+              <strong>{{ user.username }}</strong>
+            </a>
+            <a class="button is-link" href="{% url 'auth_logout' %}">
+              {% translate 'Log out' %}
+            </a>
+            {% else %}
+            <a class="button is-primary" href="{% url 'auth_login' %}">
+              <strong>{% translate 'Log in' %}</strong>
+            </a>
+            <a class="button is-link" href="{% url 'registration_register' %}">
+              {% translate 'Register' %}
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
