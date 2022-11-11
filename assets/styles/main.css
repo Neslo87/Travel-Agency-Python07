@@ -149,6 +149,7 @@ html {
   }
 
   .color-properties{
+    padding: 2px;
     color: antiquewhite;
-    background-color: #2ecc71;
+    background-color: #cae4e9;
   }

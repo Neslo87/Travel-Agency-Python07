@@ -18,7 +18,7 @@
     {% endblock styles %}
   </head>
   <body class="d-flex flex-column h-100">
-    {% include 'direction.html' %}
+    {% include 'navbar.html' %}
     <main>
       {% if messages %}
         <div class="messages">
@@ -40,12 +40,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
     {% endblock scripts %}
     {% block extrascripts %}{% endblock extrascripts %}
-    <div class="color-properties">
-      <tr>
-        <th><a href="{% url 'home' %}">Popular Attractions</a></th>
-        <th><a href="{% url 'home' %}">Book a Trip</a></th>
-      </tr>
-    </div>
+    
     <footer class="footer mt-auto py-3 bg-light">
       <div class="container text-center">
         <span class="text-muted">Copyright &copy; 2022 · Python Tirana 7 · SDA Albania</span>
