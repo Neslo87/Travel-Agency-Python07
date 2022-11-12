@@ -30,7 +30,6 @@
        
         <a class="btn btn-success" href="https://www.bing.com/images/search?q=vendet+me+te+bukura+malore+ne+shqiperi&qpvt=vendet+me+te+bukura+malore+ne+shqiperi&form=IGRE&first=1&tsc=ImageHoverTitle" target="_blank">Click Here</a>
 
-       
       </div>
     </div>
     <div class="carousel-item">
@@ -58,9 +57,45 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<div class="color-properties">
-  <a href="{% url 'popular_attraction' %}">Popular Attractions</a>
-  <a href="{% url 'book_trip' %}">Book a Trip</a>
+<br></br>
+<div>
+
+<h1 style="text-align:center; font-size: xx-large; padding: 5px; font-weight: bold;"> Popular Attraction</h1>
+
 </div>
+  <div class="row">
+    <div class="column">
+      <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/hbz-italy-cinque-terre-santa-margherita-00-index-1541710953.jpg?crop=0.984xw:0.984xh;0,0&resize=980:*" alt="Snow" style="width:100%; height: 190px;">
+    <label style="display: flex; justify-content: center">Amalfi Coast</label>
+    </div>
+    <div class="column">
+      <img src="https://drprem.com/travel/wp-content/uploads/sites/53/2013/09/Sagrada-Familia-basilica-in-Barcelona.jpg?crop=0.984xw:0.984xh;0,0&resize=980:*" alt="Forest" style="width:100%; height: 190px;">
+      <label for="">Barcelona</label>
+    </div>
+    <div class="column">
+      <img src="https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/01/Paris-2.jpg?crop=0.984xw:0.984xh;0,0&resize=980:*" alt="Mountains" style="width:100%; height: 190px;">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2019/03/Nyhavn-pier-Denmark.jpg?crop=0.984xw:0.984xh;0,0&resize=980:*" alt="Snow" style="width:100%; height: 190px;">
+    </div>
+    <div class="column">
+      <img src="https://www.planetware.com/wpimages/2019/02/germany-best-places-to-visit-medieval-rothenburg.jpg?crop=0.984xw:0.984xh;0,0&resize=980:*" alt="Forest" style="width:100%; height: 190px;">
+    </div>
+    <div class="column">
+      <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2020/02/Tourist-Places-In-Dubai_9th-jun.jpg?crop=0.984xw:0.984xh;0,0&resize=980:*" alt="Mountains" style="width:100%; height: 190px;">
+    </div>
+  </div>
+
+  <br></br>
+
+  <div style="text-align:center; background-color: aliceblue">
+    <a style="text-align:center; font-size: x-large; font-weight: bold" href="{% url 'book_trip' %}">Book a Trip</a>
+  </div>
+
+  <br></br>
+  <br></br>
 
 {% endblock content %}

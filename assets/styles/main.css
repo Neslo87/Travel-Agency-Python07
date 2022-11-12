@@ -153,3 +153,10 @@ html {
     color: antiquewhite;
     background-color: #cae4e9;
   }
+
+  .formItem label {
+    display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: .85em;
+}
