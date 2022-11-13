@@ -8,6 +8,5 @@ from . import views
 
 urlpatterns = [
     path("book_trip/", views.book_trip, name="book_trip"),
-    path("popular_attraction/", views.popular_attraction, name="popular_attraction"),
 ]
 

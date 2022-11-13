@@ -5,14 +5,14 @@ from django.urls import reverse
 
 
 class Continent(models.Model):
-    name = models.CharField(max_length=32)
+    name = models.CharField(max_length=32, null=False, blank=False)
 
     def __str__(self):
         return self.name
 
 
 class Country(models.Model):
-    name = models.CharField(max_length=128)
+    name = models.CharField(max_length=128, null=False, blank=False)
     continent = models.ForeignKey("continent", on_delete=models.CASCADE)
 
     def __str__(self):
@@ -24,7 +24,7 @@ class Country(models.Model):
 
 
 class City(models.Model):
-    name = models.CharField(max_length=256)
+    name = models.CharField(max_length=256, null=False, blank=False)
     country = models.ForeignKey("country", on_delete=models.CASCADE)
 
     def __str__(self):
@@ -36,7 +36,8 @@ class City(models.Model):
 
 
 class Airport(models.Model):
-    name = models.CharField(max_length=128)
+    name = models.CharField(max_length=128, null=False, blank=False)
+    iata = models.TextField(max_length=5, null=False, blank=False, primary_key=True)
     city = models.ForeignKey("city", on_delete=models.CASCADE)
 
     def __str__(self):
@@ -44,7 +45,7 @@ class Airport(models.Model):
 
 
 class Hotel(models.Model):
-    name = models.CharField(max_length=128)
+    name = models.CharField(max_length=128, null=False, blank=False)
     city = models.ForeignKey("city", on_delete=models.CASCADE)
     standard = models.IntegerField()
     description = models.TextField(null=True, blank=True)
