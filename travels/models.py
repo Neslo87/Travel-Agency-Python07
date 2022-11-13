@@ -2,6 +2,7 @@ from django.db import models
 from django.db.models import Q
 from django.conf import settings
 from django.urls import reverse
+import mysql.connector
 
 
 class Continent(models.Model):
