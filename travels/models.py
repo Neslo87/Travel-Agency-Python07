@@ -35,6 +35,14 @@ class City(models.Model):
         verbose_name_plural = "cities"
 
 
+class Airport(models.Model):
+    name = models.CharField(max_length=128)
+    city = models.ForeignKey("city", on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+
 class Hotel(models.Model):
     name = models.CharField(max_length=128)
     city = models.ForeignKey("city", on_delete=models.CASCADE)
@@ -51,14 +59,6 @@ class Hotel(models.Model):
                 name="chk_hotels_standard",
             )
         ]
-
-
-class Airport(models.Model):
-    name = models.CharField(max_length=128)
-    city = models.ForeignKey("city", on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.name
 
 
 BB = "Bed & Breakfast"
