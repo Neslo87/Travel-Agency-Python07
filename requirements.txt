@@ -21,6 +21,7 @@ matplotlib-inline==0.1.6
 mccabe==0.7.0
 mypy-extensions==0.4.3
 mysql-connector==2.2.9
+mysql-connector-python==8.0.31
 mysqlclient==2.1.1
 parso==0.8.3
 pathspec==0.10.1
@@ -28,6 +29,7 @@ pickleshare==0.7.5
 Pillow==9.2.0
 platformdirs==2.5.2
 prompt-toolkit==3.0.31
+protobuf==3.20.1
 pure-eval==0.2.2
 pycodestyle==2.9.1
 pyflakes==2.5.0
