@@ -1,11 +1,9 @@
 from django.db import models
 from django.db.models import Q
-from django.conf import settings
-from django.urls import reverse
 
 
 class Continent(models.Model):
-    name = models.CharField(max_length=32, null=False, blank=False)
+    name = models.CharField(max_length=64, null=False, blank=False)
 
     def __str__(self):
         return self.name
@@ -37,7 +35,7 @@ class City(models.Model):
 
 class Airport(models.Model):
     name = models.CharField(max_length=128, null=False, blank=False)
-    iata = models.TextField(max_length=5, null=False, blank=False, primary_key=True)
+    iata = models.CharField(max_length=12, null=False, blank=False, primary_key=True)
     city = models.ForeignKey("city", on_delete=models.CASCADE)
 
     def __str__(self):

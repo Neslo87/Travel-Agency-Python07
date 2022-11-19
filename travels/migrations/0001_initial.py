@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 ("name", models.CharField(max_length=128)),
                 (
                     "iata",
-                    models.TextField(max_length=5, primary_key=True, serialize=False),
+                    models.CharField(max_length=5, primary_key=True, serialize=False),
                 ),
             ],
         ),
