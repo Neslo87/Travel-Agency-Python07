@@ -1,7 +1,8 @@
 from django.shortcuts import render
-import mysql.connector
+
+from .models import Airport
 
 
 def book_trip(request):
-    return render(request, "travels/book_trip.html")
-
+    airports = [a for a in Airport.objects.values("iata", "name").all()]
+    return render(request, "travels/book_trip.html", context={"airports": airports})

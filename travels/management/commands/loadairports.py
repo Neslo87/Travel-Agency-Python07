@@ -2,15 +2,16 @@ import argparse
 import csv
 from collections import defaultdict
 from typing import Any, Optional
+from django import forms
 
 from django.core.management.base import BaseCommand, CommandParser
 
-from travels.models import Continent, Country, City, Airport
+from travels.models import Continent, Country, City, Airport, Hotel
 
 
 class Command(BaseCommand):
     def add_arguments(self, parser: CommandParser) -> None:
-        parser.add_argument("filename", type=argparse.FileType("r"))
+        parser.add_argument("filename", type=argparse.FileType("r", encoding="UTF-8"))
         return super().add_arguments(parser)
 
     def handle(self, *args: Any, **options: Any) -> Optional[str]:
@@ -26,7 +27,6 @@ class Command(BaseCommand):
             continent.save()
             continents_lookup[name] = continent.pk
             # continents.append(continent)
-
         # Continent.objects.bulk_create(continents)
         # continents_lookup = {c.name: c.pk for c in Continent.objects.all()}
 

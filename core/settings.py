@@ -65,7 +65,7 @@ WSGI_APPLICATION = "core.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "world_airports",
+        "NAME": "travels",
         "USER": "root",
         "PASSWORD": "Python@2022",
         "HOST": "127.0.0.1",
